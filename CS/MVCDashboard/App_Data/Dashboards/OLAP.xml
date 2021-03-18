@@ -1,0 +1,24 @@
+<Dashboard>
+  <Title Text="OLAP" />
+  <DataSources>
+    <OLAPDataSource ComponentName="olapCustomers" Name="OLAP Data Source" ConnectionName="olapAdventureWorks" />
+  </DataSources>
+  <Items>
+    <Grid ComponentName="gridDashboardItem1" Name="Grid 1" DataSource="olapCustomers">
+      <DataItems>
+        <Dimension DataMember="[Customer].[Customer].[Customer]" DefaultId="DataItem0" />
+      </DataItems>
+      <GridColumns>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem0" />
+        </GridDimensionColumn>
+      </GridColumns>
+      <GridOptions />
+    </Grid>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutItem DashboardItem="gridDashboardItem1" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>
