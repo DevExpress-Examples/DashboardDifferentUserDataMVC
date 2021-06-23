@@ -1,4 +1,4 @@
-# ASP.NET MVC Dashboard - How to load different data based on the current user
+# Dashboard for MVC - How to load different data based on the current user
 
 This example shows how to configure the Dashboard control so that it loads data in the multi-user environment. 
 
