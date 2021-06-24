@@ -1,3 +1,12 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [DashboardConfig.cs](./CS/MVCDashboard/App_Start/DashboardConfig.cs)
+* [CustomDataSourceStorage.cs](./CS/MVCDashboard/CustomDataSourceStorage.cs)
+* [Index.cshtml](./CS/MVCDashboard/Views/Home/Index.cshtml)
+* [Dashboard.cshtml](./CS/MVCDashboard/Views/Home/Dashboard.cshtml)
+<!-- default file list end -->
+
 # Dashboard for MVC - How to load different data based on the current user
 
 This example shows how to configure the Dashboard control so that it loads data in the multi-user environment. 
