@@ -23,6 +23,7 @@
 
 @Html.DevExpress().Dashboard(settings => {
     settings.Name = "Dashboard";
+    settings.ControllerName = "DefaultDashboard";
     settings.ControlStyle.CssClass = "dashboard";
     settings.ClientSideEvents.BeforeRender = "onBeforeRender";
     settings.WorkingMode = WorkingMode.Viewer;
