@@ -3,14 +3,6 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T983293)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
-
-* [DashboardConfig.cs](./CS/MVCDashboard/App_Start/DashboardConfig.cs)
-* [CustomDataSourceStorage.cs](./CS/MVCDashboard/CustomDataSourceStorage.cs)
-* [Index.cshtml](./CS/MVCDashboard/Views/Home/Index.cshtml)
-* [Dashboard.cshtml](./CS/MVCDashboard/Views/Home/Dashboard.cshtml)
-<!-- default file list end -->
 
 # Dashboard for MVC - How to load different data based on the current user
 
@@ -23,7 +15,14 @@ You can identify a user in the current session and handle the following events t
 * [DashboardConfigurator.CustomFilterExpression](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.DashboardConfigurator.CustomFilterExpression)
 * [DashboardConfigurator.CustomParameters](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.DashboardConfigurator.CustomParameters)
 
-**Files to look at**: [DashboardConfig.cs](./CS/MVCDashboard/App_Start/DashboardConfig.cs)
+<!-- default file list -->
+## Files to look at
+
+* [DashboardConfig.cs](./CS/MVCDashboard/App_Start/DashboardConfig.cs)
+* [CustomDataSourceStorage.cs](./CS/MVCDashboard/CustomDataSourceStorage.cs)
+* [Index.cshtml](./CS/MVCDashboard/Views/Home/Index.cshtml)
+* [Dashboard.cshtml](./CS/MVCDashboard/Views/Home/Dashboard.cshtml)
+<!-- default file list end -->
 
 ## Example Structure
 
