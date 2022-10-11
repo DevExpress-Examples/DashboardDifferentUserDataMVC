@@ -25,8 +25,8 @@ namespace MVCDashboard {
 
         // Configure user-specific data caching
         private static void DashboardConfigurator_CustomParameters(object sender, CustomParametersWebEventArgs e) {
-            var userName = (string)HttpContext.Current.Session["CurrentUser"];
-            e.Parameters.Add(new Parameter("UserRole", typeof(string), userName));
+            var userId = HttpContext.Current.Session["CurrentUser"].GetHashCode();
+            e.Parameters.Add(new Parameter("UserId", typeof(string), userId));
         }
 
         // Conditional data loading for ObjectDataSource
