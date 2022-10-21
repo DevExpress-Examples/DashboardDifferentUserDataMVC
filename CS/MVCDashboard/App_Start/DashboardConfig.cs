@@ -51,10 +51,10 @@ namespace MVCDashboard {
                 var sqlConnectionParameters = e.ConnectionParameters as CustomStringConnectionParameters;
 
                 if (userName == "Admin") {
-                    sqlConnectionParameters.ConnectionString = @"XpoProvider=MSAccess;Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\nwind_admin.mdb;";
+                    sqlConnectionParameters.ConnectionString = @"XpoProvider=MSAccess;Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\nwind_admin.mdb;";
                 }
                 else if (userName == "User") {
-                    sqlConnectionParameters.ConnectionString = @"XpoProvider=MSAccess;Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\nwind_user.mdb;";
+                    sqlConnectionParameters.ConnectionString = @"XpoProvider=MSAccess;Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\nwind_user.mdb;";
                 }
             }
             else if (e.ConnectionName == "jsonCustomers") {
@@ -119,7 +119,7 @@ namespace MVCDashboard {
 
             if (e.DashboardId == "SQLFilter" && e.QueryName == "Categories") {
                 if (userName == "User") {
-                    e.FilterExpression = CriteriaOperator.Parse("StartsWith([CategoryName], ?CategoryNameStartsWith)");
+                    e.FilterExpression = CriteriaOperator.Parse("StartsWith([CategoryName], 'c')");
                 }
             }
         }
