@@ -17,18 +17,17 @@ namespace MVCDashboard {
             DashboardConfigurator.Default.SetDashboardStorage(new DashboardFileStorage(@"~/App_Data/Dashboards"));
             DashboardConfigurator.Default.SetDataSourceStorage(new CustomDataSourceStorage());
 
-            DashboardConfigurator.Default.CustomParameters += DashboardConfigurator_CustomParameters;
+            DashboardConfigurator.Default.DataSourceCacheKeyCreated += DashboardConfigurator_DataSourceCacheKeyCreated;
             DashboardConfigurator.Default.DataLoading += DashboardConfigurator_DataLoading;
             DashboardConfigurator.Default.CustomFilterExpression += DashboardConfigurator_CustomFilterExpression;
             DashboardConfigurator.Default.ConfigureDataConnection += DashboardConfigurator_ConfigureDataConnection;
         }
 
         // Configure user-specific data caching
-        private static void DashboardConfigurator_CustomParameters(object sender, CustomParametersWebEventArgs e) {
+        private static void DashboardConfigurator_DataSourceCacheKeyCreated(object sender, DataSourceCacheKeyCreatedEventArgs e) {
             var userId = HttpContext.Current.Session["CurrentUser"].GetHashCode();
-            e.Parameters.Add(new Parameter("UserId", typeof(string), userId));
+            e.Key.CustomData.Add("UserId", userId.ToString());
         }
-
         // Conditional data loading for ObjectDataSource
         private static void DashboardConfigurator_DataLoading(object sender, DataLoadingWebEventArgs e) {
             var userName = (string)HttpContext.Current.Session["CurrentUser"];
