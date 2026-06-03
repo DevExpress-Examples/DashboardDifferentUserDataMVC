@@ -96,7 +96,7 @@ namespace MVCDashboard {
             }
             else if (e.ConnectionName == "olapAdventureWorks") {
                 if (userName == "Admin") {
-                    ((OlapConnectionParameters)e.ConnectionParameters).ConnectionString = @"provider=MSOLAP;data source=http://demos.devexpress.com/Services/OLAP/msmdpump.dll;initial catalog=Adventure Works DW Standard Edition;cube name=Adventure Works;";
+                    ((OlapConnectionParameters)e.ConnectionParameters).ConnectionString = @"provider=MSOLAP;data source=https://demos.devexpress.com/Services/OLAP/msmdpump.dll;initial catalog=Adventure Works DW Standard Edition;cube name=Adventure Works;";
                 }
                 else if (userName == "User") {
                     throw new ApplicationException("You are not authorized to access OLAP data.");
